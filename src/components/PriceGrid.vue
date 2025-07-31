@@ -20,28 +20,61 @@
 </template>
 
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useI18n } from '../composables/useI18n'
+import { computed } from "vue";
+import { useI18n } from "../composables/useI18n";
 
-const { t } = useI18n()
-
-interface PriceItem {
-  categoryKey: keyof typeof t.value.prices.categories
-  category: string
-  priceRange: string
-  icon: string
-}
+const { t } = useI18n();
 
 const priceItems = computed(() => [
-  { categoryKey: 'tshirts' as const, category: t.value.prices.categories.tshirts, priceRange: '6-20€', icon: '👕' },
-  { categoryKey: 'jeans' as const, category: t.value.prices.categories.jeans, priceRange: '13-25€', icon: '👖' },
-  { categoryKey: 'dresses' as const, category: t.value.prices.categories.dresses, priceRange: '15-30€', icon: '👗' },
-  { categoryKey: 'shirtsBlouses' as const, category: t.value.prices.categories.shirtsBlouses, priceRange: '10-25€', icon: '👔' },
-  { categoryKey: 'blazers' as const, category: t.value.prices.categories.blazers, priceRange: '18-35€', icon: '🧥' },
-  { categoryKey: 'skirts' as const, category: t.value.prices.categories.skirts, priceRange: '11-25€', icon: '👜' },
-  { categoryKey: 'tracksuits' as const, category: t.value.prices.categories.tracksuits, priceRange: '25-35€', icon: '🏃‍♀️' },
-  { categoryKey: 'bags' as const, category: t.value.prices.categories.bags, priceRange: '20-45€', icon: '👛' }
-])
+  {
+    categoryKey: "tshirts" as const,
+    category: t.value.prices.categories.tshirts,
+    priceRange: "6-20€",
+    icon: "👕",
+  },
+  {
+    categoryKey: "jeans" as const,
+    category: t.value.prices.categories.jeans,
+    priceRange: "13-25€",
+    icon: "👖",
+  },
+  {
+    categoryKey: "dresses" as const,
+    category: t.value.prices.categories.dresses,
+    priceRange: "15-30€",
+    icon: "👗",
+  },
+  {
+    categoryKey: "shirtsBlouses" as const,
+    category: t.value.prices.categories.shirtsBlouses,
+    priceRange: "10-25€",
+    icon: "👔",
+  },
+  {
+    categoryKey: "blazers" as const,
+    category: t.value.prices.categories.blazers,
+    priceRange: "18-35€",
+    icon: "🧥",
+  },
+  {
+    categoryKey: "skirts" as const,
+    category: t.value.prices.categories.skirts,
+    priceRange: "11-25€",
+    icon: "👜",
+  },
+  {
+    categoryKey: "tracksuits" as const,
+    category: t.value.prices.categories.tracksuits,
+    priceRange: "25-35€",
+    icon: "🏃‍♀️",
+  },
+  {
+    categoryKey: "bags" as const,
+    category: t.value.prices.categories.bags,
+    priceRange: "20-45€",
+    icon: "👛",
+  },
+]);
 </script>
 
 <style scoped>
@@ -80,7 +113,9 @@ const priceItems = computed(() => [
   text-align: center;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   border: 1px solid var(--dusty-rose);
 }
 
@@ -112,16 +147,16 @@ const priceItems = computed(() => [
   .price-section {
     padding: 60px 0;
   }
-  
+
   .section-title {
     font-size: 2rem;
   }
-  
+
   .price-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
   }
-  
+
   .price-card {
     padding: 30px 15px;
   }
