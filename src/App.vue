@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Hero />
-    <PriceGrid />
+    <!-- <PriceGrid /> -->
     <Brands />
     <Contact />
     <Footer />
@@ -10,7 +10,7 @@
 
 <script setup lang="ts">
 import Hero from './components/Hero.vue'
-import PriceGrid from './components/PriceGrid.vue'
+// import PriceGrid from './components/PriceGrid.vue'
 import Brands from './components/Brands.vue'
 import Contact from './components/Contact.vue'
 import Footer from './components/Footer.vue'
